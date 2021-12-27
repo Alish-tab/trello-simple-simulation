@@ -1,0 +1,22 @@
+{
+  "name": "trello-simple-simulation",
+  "version": "1.0.0",
+  "description": "it's trello simple simulation that you can only create lists and cards then drag and drop them",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass style/sass/main.scss style/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alish-tab/trello-simple-simulation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alish-tab/trello-simple-simulation/issues"
+  },
+  "homepage": "https://github.com/Alish-tab/trello-simple-simulation#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
