@@ -1,0 +1,10 @@
+#add-list__input{
+    width: 100%;
+    margin-bottom: .7rem;
+    &:focus{
+        outline: none;
+        border: 3px  solid $color--blue;
+        border-radius: 3px;
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,49 @@
+.add-btn{
+    font-size: 1.7rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 3px;
+    background-color: $color--blue;
+    color: $color--white;
+    cursor: pointer;
+}
+
+
+.cancel-btn{
+    width: 2.5rem;
+    height: 2px;
+    display: inline-block;
+    background-color: rgba($color--black , .8);
+    transform: rotate(45deg);
+    position: relative;
+    margin-left: 1rem;
+    cursor: pointer;
+
+    &::after{
+        content: "";
+        width: 2.5rem;
+        height: 2px;
+        display: inline-block;
+        position: absolute;
+        background-color: rgba($color--black , .8);
+        top: 0;
+        //transform: rotate(-45deg);
+       
+    }
+    
+}
+
+.cancel-btn::after{transform: rotate(-90deg);}
+
+
+#add-list__creat{
+    padding: 1rem;
+    width: 100%;
+    background-color: rgba($color--white , .3);
+    border: none;
+    border-radius: 3px;
+    font-size: 1.7rem;
+    color: $color--white;
+    text-align: left;
+    cursor: pointer;
+}

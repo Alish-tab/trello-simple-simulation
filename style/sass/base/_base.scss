@@ -7,4 +7,14 @@
 
 body{
     background-color: $color--body;
+    padding: 1.5rem;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: block;
 }

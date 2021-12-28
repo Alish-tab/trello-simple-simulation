@@ -1,0 +1,10 @@
+
+
+#add-list{
+    width: 27rem;
+    & > .input-div{
+        background-color: $color--white;
+        padding: 1rem;
+        margin-bottom: .7rem;
+    }
+}
