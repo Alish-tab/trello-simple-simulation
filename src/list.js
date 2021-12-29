@@ -15,11 +15,10 @@ addAnotherList.addEventListener('click' , () => {
     addAnotherList.classList.add('hidden')
     inputDiv.classList.remove('hidden')
     inputDiv.classList.add('visible')
-
-    
-    
-    
+    listInput.focus()
 })
+
+
 
 
 /**************************cancel add list **********************/

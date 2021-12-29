@@ -1,6 +1,8 @@
 #add-list__input{
     width: 100%;
     margin-bottom: .7rem;
+    border-radius: 3px;
+        padding: 1rem;
     &:focus{
         outline: none;
         border: 3px  solid $color--blue;
