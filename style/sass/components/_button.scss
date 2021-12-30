@@ -36,3 +36,21 @@
     text-align: left;
     cursor: pointer;
 }
+
+
+#add-card__creat{
+    padding: 1rem;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.6rem;
+    color: rgba($color--black , .5);
+    text-align: left;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $color--grey;
+        color: rgba($color--black , .7);
+    }
+}

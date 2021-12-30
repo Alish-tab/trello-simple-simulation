@@ -1,10 +1,45 @@
+.container{
+    display: flex;
+    gap: 1.5rem;
+}
 
+#lists{
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.lists__item{
+    min-width: 27rem;
+    padding: 1.5rem 1rem;
+    background-color: $color--grey-light;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
 
 #add-list{
-    width: 27rem;
+    min-width: 27rem;
     & > .input-div{
         background-color: $color--white;
         padding: 1rem;
         margin-bottom: .7rem;
     }
+}
+
+
+
+.card-input-div{
+    background-color: $color--white;
+    padding: 1rem;
+    margin-bottom: .7rem;
+}
+
+.card{
+    background-color: $color--white;
+    padding: 1rem;
+    font-size: 1.4rem;
+
 }

@@ -1,8 +1,14 @@
+import { creatList } from './functions.js'
+import { getCardInput } from './card.js'
+
+const listsDiv = document.getElementById('lists')
+
 const addAnotherList = document.getElementById('add-list__creat')
 
 const inputDiv = document.querySelector('.input-div')
 const listInput = document.getElementById('add-list__input')
 
+const confirmAddList = document.getElementById('add-list__confirm-btn')
 const cancelAddList = document.getElementById('add-list__cancel-btn')
 
 
@@ -21,11 +27,42 @@ addAnotherList.addEventListener('click' , () => {
 
 
 
-/**************************cancel add list **********************/
+/************************get title of list **********************/
+listInput.addEventListener('input' , event => {
+    console.log(event.target.value)
+
+    if(event.target.value.trim() !== ""){
+        confirmAddList.disabled = false
+    }else{
+        confirmAddList.disabled = true
+    }
+})
+
+
+
+/**************************Confirm Add List *********************/
+confirmAddList.addEventListener('click' , () => {
+    creatList(listInput.value , listsDiv)
+
+    listInput.value = ''
+    inputDiv.classList.remove('visible')
+    inputDiv.classList.add('hidden')
+    addAnotherList.classList.remove('hidden')
+    addAnotherList.classList.add('visible')
+
+    getCardInput()
+})
+
+
+
+
+/**************************Cancel Add List **********************/
 cancelAddList.addEventListener('click' , () => {
     inputDiv.classList.remove('visible')
     inputDiv.classList.add('hidden')
     addAnotherList.classList.remove('hidden')
     addAnotherList.classList.add('visible')
-    
+    listInput.value = ''
 })
+
+
