@@ -41,13 +41,16 @@
 #add-card__creat{
     padding: 1rem;
     width: 100%;
-    background-color: transparent;
+    background-color: $color--grey-light;
     border: none;
     border-radius: 3px;
     font-size: 1.6rem;
     color: rgba($color--black , .5);
     text-align: left;
     cursor: pointer;
+    position: sticky;
+    bottom: -1.55rem;
+    z-index: 10;
 
     &:hover{
         background-color: $color--grey;

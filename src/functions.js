@@ -17,7 +17,7 @@ export const creatList = (title , parentDiv) => {
     list.appendChild(addCardBtn)
     
     parentDiv.appendChild(list)
-
+    dragHandler()
 }
 
 
@@ -38,6 +38,7 @@ const creatAddCardDiv = (div) => {
     `
 
     div.append(inputDiv)
+    
 }
 
 
@@ -46,6 +47,7 @@ const creatAddCardDiv = (div) => {
 export const creatCard = (title , parentDiv) => {
     const cardDiv = document.createElement('div')
     cardDiv.className = 'card'
+    cardDiv.draggable = true
 
     const cardTitle = document.createElement('h2')
     cardTitle.className = 'card-title'
@@ -53,5 +55,59 @@ export const creatCard = (title , parentDiv) => {
 
     cardDiv.appendChild(cardTitle)
 
+    
     parentDiv.lastElementChild.before(cardDiv)
+    dragHandler()
+}
+
+
+
+const dragHandler = () => {
+    const cards = document.querySelectorAll('.card')
+    const lists = document.querySelectorAll('.lists__item')
+
+    let draggedItem = null
+
+    for(const card of cards){
+        card.addEventListener('dragstart' , () => {
+            draggedItem = card
+            setTimeout(() => {
+                card.style.display = 'none'
+              }, 0)
+        })
+
+        card.addEventListener('dragend' , () => {
+            setTimeout(() => {
+                draggedItem.style.display = 'block'
+                draggedItem = null
+              } , 0)
+        })
+
+        for(const list of lists){
+            
+            
+            list.addEventListener('dragenter' , (e) => {
+                e.preventDefault()
+                list.style.backgroundColor = '#ccc'
+            })
+
+            list.addEventListener('dragover' , (e) => {
+                e.preventDefault()
+                list.style.backgroundColor = '#ccc'
+            })
+
+            list.addEventListener('dragleave' , (e) => {
+                list.style.backgroundColor = '#eee'
+            })
+
+            list.addEventListener('drop' , (e) => {
+                if(draggedItem !== null){
+                    list.lastElementChild.before(draggedItem);
+                    list.style.backgroundColor = '#eee'
+                  }
+            })
+
+            
+        }
+    }
 }
