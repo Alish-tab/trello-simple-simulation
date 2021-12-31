@@ -1,7 +1,8 @@
-import { creatList } from './functions.js'
-import { getCardInput } from './card.js'
+import { creatList } from './functions'
+import { getCardInput } from './card'
 
-const listsDiv = document.getElementById('lists')
+export const app = () => {
+    const listsDiv = document.getElementById('lists')
 
 const addAnotherList = document.getElementById('add-list__creat')
 
@@ -29,13 +30,13 @@ addAnotherList.addEventListener('click' , () => {
 
 /************************get title of list **********************/
 listInput.addEventListener('input' , event => {
-    console.log(event.target.value)
 
     if(event.target.value.trim() !== ""){
         confirmAddList.disabled = false
     }else{
         confirmAddList.disabled = true
     }
+    
 })
 
 
@@ -66,3 +67,5 @@ cancelAddList.addEventListener('click' , () => {
 })
 
 
+
+}

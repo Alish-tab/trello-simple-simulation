@@ -1,4 +1,4 @@
-import { creatCard } from './functions.js'
+import { creatCard } from './functions'
 
 export const getCardInput = () => {
     const addAnotherCard = document.querySelectorAll('#add-card__creat')
@@ -7,8 +7,6 @@ export const getCardInput = () => {
 
 
 for(const add of addAnotherCard){
-
-    console.log(add)
 
     const cardInputDiv = add.parentElement.querySelector('.card-input-div')
     const cardInput = add.parentElement.querySelector('#add-card__input')
@@ -33,7 +31,6 @@ for(const add of addAnotherCard){
 
     /******************************Get Title of Card **************************/
     cardInput.addEventListener('input' , event => {
-        console.log(event.target.value)
         if(event.target.value.trim() !== ''){
             confirmAddCard.disabled = false
         }else{

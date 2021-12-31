@@ -18,6 +18,8 @@ export const creatList = (title , parentDiv) => {
     
     parentDiv.appendChild(list)
     dragHandler()
+
+    
 }
 
 

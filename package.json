@@ -4,7 +4,8 @@
   "description": "it's trello simple simulation that you can only create lists and cards then drag and drop them",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass style/sass/main.scss style/css/style.css -w"
+    "compile:sass": "node-sass style/sass/main.scss style/css/style.css -w",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,9 @@
   "homepage": "https://github.com/Alish-tab/trello-simple-simulation#readme",
   "dependencies": {
     "node-sass": "^7.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
   }
 }
